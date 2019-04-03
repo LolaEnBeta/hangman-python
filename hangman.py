@@ -10,14 +10,3 @@ while x > 0:
     print(letter_position)
     x = x - 1
 print("Game Over!")
-
-
-
-
-
-
-
-
-
-
-        
