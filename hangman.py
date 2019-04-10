@@ -26,10 +26,10 @@ word_letter = set(list(word))
 letter_list = set()
 x = 8
 while x > 0:
+    print("\n")
     letter = input("Enter a letter or a word: ")
     letter_list.add(letter)
     found_letter = False
-
     #este if compara la palabra que el usuario cree con la que es, si es correcta: win
     if letter == word:
         print("You're right!")
@@ -42,14 +42,14 @@ while x > 0:
         #este if comprueba que la letra de la palabra coincide con la letra input, 
         #si coincide la escribe, sino escribe -.
         if current_letter in letter_list:
-            print(current_letter)
+            print(current_letter, " ",end = '')
         else:
-            print("-")
+            print("-", " ", end = '')
    
     #esto se tiene que hacer solo si la letra no aparece en la palabra.
     if not found_letter:
         x = x - 1
-    
+    print("\n")
     print("Te quedan", x, "oportunidades")
     print(letter_list)
 
