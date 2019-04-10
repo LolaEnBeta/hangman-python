@@ -10,17 +10,21 @@ def has_user_won(word, letter_list):
     else:
         return False
 
-word = input("Enter a word:")
+word = input("Enter a word: ")
 print(len(word))
 word_letter = set(list(word))
-print(word_letter)
 
 letter_list = set()
 x = 8
 while x > 0:
-    letter = input("Write one letter:")
+    letter = input("Enter a letter or a word: ")
     letter_list.add(letter)
     found_letter = False
+
+    #este if compara la palabra que el usuario cree con la que es, si es correcta: win
+    if letter == word:
+        print("You're right!")
+        exit()
 
     #este for recorre cada letra de la palabra.
     for current_letter in word:
