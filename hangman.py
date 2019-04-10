@@ -10,8 +10,12 @@ def has_user_won(word, letter_list):
     else:
         return False
 
-word = input("Enter a word: ")
-print(len(word))
+
+import random
+memory_words = ["casa", "zarzaparrilla", "semaforo", "arbol", "escalera", "frigorifico", "calle", "edificio", "television"]
+word = random.choice(memory_words)
+
+print("The word has",len(word), "letters.")
 word_letter = set(list(word))
 
 letter_list = set()
@@ -41,7 +45,7 @@ while x > 0:
     if not found_letter:
         x = x - 1
     
-    print("Te quedan ", x, " oportunidades")
+    print("Te quedan", x, "oportunidades")
     print(letter_list)
 
    #refirige al def y lo ejecuta, si el resultado es True: win and exit
