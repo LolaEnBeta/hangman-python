@@ -14,7 +14,8 @@ def has_user_won(word, letter_list):
 file = open("lista_palabras.txt", "r")
 memory_words = list()
 for line in file:
-    memory_words = line.split()
+    line = line.rstrip()
+    memory_words.append(line)
 
 import random
 word = random.choice(memory_words)
