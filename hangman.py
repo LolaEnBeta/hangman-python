@@ -10,9 +10,13 @@ def has_user_won(word, letter_list):
     else:
         return False
 
+#esto hace que del fichero con las palabras cree una lista
+file = open("lista_palabras.txt", "r")
+memory_words = list()
+for line in file:
+    memory_words = line.split()
 
 import random
-memory_words = ["casa", "zarzaparrilla", "semaforo", "arbol", "escalera", "frigorifico", "calle", "edificio", "television"]
 word = random.choice(memory_words)
 
 print("The word has",len(word), "letters.")
@@ -48,7 +52,7 @@ while x > 0:
     print("Te quedan", x, "oportunidades")
     print(letter_list)
 
-   #refirige al def y lo ejecuta, si el resultado es True: win and exit
+   #redirige al def y lo ejecuta, si el resultado es True: win and exit
 
     if has_user_won(word, letter_list):
         print("You win!!!!")
