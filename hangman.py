@@ -16,6 +16,7 @@ memory_words = list()
 for line in file:
     line = line.rstrip()
     memory_words.append(line)
+file.close()
 
 import random
 word = random.choice(memory_words)
