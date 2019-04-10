@@ -54,4 +54,4 @@ while x > 0:
         print("You win!!!!")
         exit()
 
-print("Game Over!")
+print("Game Over! The word was", word,".")
